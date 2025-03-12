@@ -1,0 +1,10 @@
+const express = require("express");
+let pageRouter = express.Router();
+const path = require("path");
+const sendFile = (name) => path.join(__dirname, "..", "src", "pages","web", name);
+pageRouter.get("/", (req, res) => res.sendFile(sendFile("connection.html")));
+pageRouter.get("/share", (req, res) => res.sendFile(sendFile("share.html")));
+pageRouter.get("/files", (req, res) => res.sendFile(sendFile("files.html")));
+pageRouter.get("/upload", (req, res) => res.sendFile(sendFile("upload.html")));
+pageRouter.get("/dev", (req, res) => res.sendFile(sendFile("dev.html")));
+module.exports = { pageRouter };

@@ -1,0 +1,46 @@
+.back-to-main {
+  text-align: center;
+  margin-top: 20px;
+}
+.upload-div {
+  padding: 20px 0;
+  margin: 10px 0;
+  position: relative;
+  background-color: rgb(241, 241, 241);
+}
+.upload-div input {
+  visibility: hidden;
+  position: absolute;
+}
+.upload-div label {
+  padding: 7px 16px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.upload-status h3 {
+  padding: 10px;
+}
+.upload-file-status {
+  padding: 8px 10px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 3px;
+}
+.upload-file-status p {
+  font-size: 14px;
+}
+#upload-div {
+  overflow-x: hidden;
+}
+.hide-from-ui {
+  animation: hideMe 0.2s forwards linear;
+}
+@keyframes hideMe {
+  90% {
+    transform: translateX(200px);
+  }
+  100% {
+    display: none;
+    transform: translateX(220px);
+  }
+}

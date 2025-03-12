@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content=" script-src 'self'" />
+    <title>We Share</title>
+
+    <link rel="stylesheet" href="../css/Common.css" />
+    <link rel="stylesheet" href="../css/Nav.css" />
+    <link rel="stylesheet" href="../css/Connected.css" />
+  </head>
+  <body>
+    <nav>
+      <a id="connection" href="./connection.html" class="nav-active"
+        >Connection</a
+      >
+      <a href="./files.html">Files</a>
+      <a href="./upload.html">Upload</a>
+    </nav>
+    <div class="container">
+      <div class="back-to-main-top">
+        <a href="../../index.html" class="button">Back to main page</a>
+      </div>
+      <p id="connection-title">Server is Running in:</p>
+      <div id="connection-container" class="flex flex-col gap-15"></div>
+    
+    </div>
+    <div class="back-to-main">
+      <a href="../../index.html" class="button">Back to main page</a>
+    </div>
+  </body>
+
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/Utility.js"></script>
+  <script src="../scripts/sweetealert.min.js"></script>
+  <script src="../scripts/qrcode.min.js"></script>
+  <script src="../scripts/server.js"></script>
+</html>

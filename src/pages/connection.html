@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Security-Policy" content="script-src 'self'" />
+    <title>We Share</title>
+
+    <link rel="stylesheet" href="../css/Common.css" />
+    <link rel="stylesheet" href="../css/Nav.css" />
+    <link rel="stylesheet" href="../css/Connected.css" />
+  </head>
+  <body>
+    <nav>
+      <a id="connection" href="./connection.html" class="nav-active"
+        >Connection</a
+      >
+      <a href="./files.html">Files</a>
+      <a href="./upload.html">Upload</a>
+    </nav>
+    <div class="container">
+      <p id="connection-title">You Are Not Connected:</p>
+      <p id="connection-info" class="font-semibold text-ui-gray"></p>
+      <div id="connection-container" class="flex flex-col">
+        <form
+          id="connection-form"
+          class="connection-div flex flex-col-sm justify-content-between items-center bg-ui-gray"
+        >
+          <div class="flex">
+            <div class="flex flex-col justify-between">
+              <p class="connection-sub-title">IP Address</p>
+              <div class="flex items-center">
+                <input
+                  class="connection-ip-part"
+                  id="ipv1"
+                  placeholder="192"
+                  value="192"
+                  required
+                />
+                <p class="font-bold">.</p>
+                <input
+                  class="connection-ip-part"
+                  id="ipv2"
+                  placeholder="168"
+                  value="168"
+                  required
+                />
+                <p class="font-bold">.</p>
+                <input
+                  class="connection-ip-part"
+                  id="ipv3"
+                  placeholder="0"
+                  required
+                />
+                <p class="font-bold">.</p>
+                <input
+                  class="connection-ip-part"
+                  id="ipv4"
+                  placeholder="101"
+                  required
+                />
+                <p class="font-bold">:</p>
+              </div>
+            </div>
+            <div class="flex flex-col justify-between">
+              <p class="connection-sub-title">Port</p>
+              <div>
+                <input
+                  class="connection-ip-part"
+                  id="ipPort"
+                  placeholder="000"
+                  value="3000"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit">Connect</button>
+          </div>
+        </form>
+      </div>
+      <p id="qr-code-title" class="text-base"> Qr Code | Scan to connect to this network</p>
+      <div id="qr-code"></div>
+      <div class="back-to-main">
+        <a href="../../index.html" class="button">Back to main page</a>
+      </div>
+    </div>
+  </body>
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/Utility.js"></script>
+  <script src="../scripts/sweetealert.min.js"></script>
+  <script src="../scripts/qrcode.min.js"></script>
+  <script src="../scripts/connection.js"></script>
+</html>

@@ -1,0 +1,48 @@
+.connection-sub-title {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.connection-div {
+  padding: 15px 20px;
+}
+
+#connection-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.connection-ip-part {
+  padding: 5px 5px;
+  width: 50px;
+  background-color: white;
+  margin: 4px 5px;
+  border-radius: 2px;
+  font-weight: 600;
+  color: black;
+}
+.back-to-main {
+  padding: 50px 0;
+  text-align: center;
+}
+.back-to-main-top{
+  padding: 0 0;
+  text-align: end;
+}
+#connection-info {
+padding: 10px 0;
+}
+.connection-div-container{
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#qr-code{
+  margin-top: 10px;
+}
+#qr-code-title{
+  padding: 10px 0;
+}

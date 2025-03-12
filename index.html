@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>We Share | Start Page</title>
+    <link rel="stylesheet" href="./src/css/Common.css" />
+    <link rel="stylesheet" href="./src/css/AppStart.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>Welcome To We Share App</h1>
+      <p>Share files across devices in the same network easily</p>
+      <div id="button-group">
+        <button id="startServer">Start Server</button>
+        <span>Or</span>
+        <a href="./src/pages/connection.html">Connect to server</a>
+      </div>
+      <div id="how-to">
+        <h2>How To share files ?</h2>
+        <ol>
+          <li>Open your app on Laptop or PC</li>
+          <li>
+            Click on <i><b> Start server </b></i> button to create a new server
+          </li>
+          <li>
+            If someone already created a server then click on
+            <i><b> connect to server </b></i>
+          </li>
+          <li>Finally Upload or view shared files by other devices</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+  <script src="./src/scripts/sweetealert.min.js"></script>
+</html>

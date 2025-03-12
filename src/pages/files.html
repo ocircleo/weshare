@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content=" script-src 'self'" />
+    <title>We Share</title>
+    <link rel="stylesheet" href="../css/Common.css" />
+    <link rel="stylesheet" href="../css/Nav.css" />
+    <link rel="stylesheet" href="../css/files.css" />
+  </head>
+  <body>
+    <nav>
+      <a id="connection" href="./connection.html">Connection</a>
+      <a href="./files.html" class="nav-active">Files</a>
+      <a href="./upload.html">Upload</a>
+    </nav>
+    <div class="container">
+      <h1>All files</h1>
+      <div id="file-div" class="flex flex-col gap-10">
+        <p class="text-ui-gray text-lg no-files-found font-semibold">
+          No Files found
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/Utility.js"></script>
+  <script src="../scripts/sweetealert.min.js"></script>
+  <script src="../scripts/files.js"></script>
+</html>

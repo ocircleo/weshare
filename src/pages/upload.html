@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Security-Policy" content="script-src 'self'" />
+    <title>We Share</title>
+
+    <link rel="stylesheet" href="../css/Common.css" />
+    <link rel="stylesheet" href="../css/Nav.css" />
+    <link rel="stylesheet" href="../css/upload.css" />
+  </head>
+  <body>
+    <nav>
+      <a id="connection" href="./connection.html">Connection</a>
+      <a href="./files.html">Files</a>
+      <a href="./upload.html" class="nav-active">Upload</a>
+    </nav>
+    <div class="container">
+      <h2 class="text-lg">Upload Files and Share Easily</h2>
+      <div
+        class="upload-div flex items-center justify-content-center bg-ui-gray"
+      >
+        <label for="upload-btn" class="bg-ui-blue font-semibold"
+          >Click to upload files</label
+        >
+        <input type="file" placeholder="Choose file" id="upload-btn" multiple />
+      </div>
+      <div class="upload-status">
+        <h3>Upload status</h3>
+        <div id="upload-div" class="flex flex-col gap-6 font-semibold"></div>
+      </div>
+    </div>
+ 
+  </body>
+  <script src="../scripts/sweetealert.min.js"></script>
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/Utility.js"></script>
+  <script src="../scripts/upload.js"></script>
+</html>

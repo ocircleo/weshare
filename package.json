@@ -1,0 +1,40 @@
+{
+  "name": "weshare",
+  "version": "1.0.1",
+  "description": "An App for share files easily across devices",
+  "main": "index.js",
+  "author": "Md.Salman Hossain, email: salmanhossain11222626@gmail.com",
+  "license": "N/A",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "weshare",
+    "dmg": {
+      "title": "We Share 1.0.1"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "axios": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs-extra": "^11.3.0",
+    "multer": "^1.4.5-lts.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "uuid": "^11.1.0"
+  }
+}
