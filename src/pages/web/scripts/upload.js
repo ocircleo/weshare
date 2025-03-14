@@ -20,7 +20,6 @@ const Toast = Swal.mixin({
     let urlArray = location.split("/");
     let newUrl = urlArray[0] + "//" + urlArray[2];
     let result = await pingFetch(newUrl);
-    console.log(result);
   } catch (error) {
     console.log(error);
   }
@@ -49,7 +48,7 @@ async function FileUpload(name, size, type, file) {
   }
   let user = JSON.parse(sessionStorage.getItem("user"));
   let url = connectionUrl + "/files/file-upload/" + user.id;
-  console.log(user, user.id);
+
   xhr.upload.addEventListener(
     "progress",
     (e) => {

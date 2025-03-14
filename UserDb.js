@@ -105,12 +105,17 @@ const generateUser = (role) => {
   users.push(newUser);
   return newUser;
 };
+const generateUserName = (id) => {
+  if (index == pcNames.length) index = 0;
+  let newUser = { name: pcNames[index], id, role: role };
+  index++;
+  users.push(newUser);
+  return newUser;
+};
 const getUser = (id) => {
   let temUser = users.find((ele) => ele.id == id);
-  console.log(temUser);
-  for (let i = 0; i < users.length; i++) {
-    console.log("checking user info ", users[i]);
-  }
+  if (!temUser) temUser = generateUser(id);
+  if(!temUser.name) temUser = generateUserName(id);
   return temUser;
 };
 module.exports = { generateUser, getUser };

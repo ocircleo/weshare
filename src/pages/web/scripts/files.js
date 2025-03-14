@@ -15,7 +15,6 @@ const Toast = Swal.mixin({
     let urlArray = location.split("/");
     let newUrl = urlArray[0] + "//" + urlArray[2];
     let result = await pingFetch(newUrl);
-    console.log(result);
   } catch (error) {
     console.log(error);
   } finally {

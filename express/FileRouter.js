@@ -32,7 +32,6 @@ fileRouter.post("/file-upload/:userId", upload.single("file"), (req, res) => {
   let user = getUser(userId);
   let userName = "unknown";
   if (user) userName = user.name;
-  console.log(user);
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
@@ -57,7 +56,6 @@ fileRouter.post("/file-upload/:userId", upload.single("file"), (req, res) => {
 
 // Serve files as downloadable links
 fileRouter.get("/download/:filename", (req, res) => {
-  console.log("hitting download");
   const filename = req.params.filename;
   const fileRecord = userFiles.find((file) => file.fileNewName == filename);
 

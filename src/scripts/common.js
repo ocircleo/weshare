@@ -8,3 +8,6 @@ if (temUser?.role == "server") {
 // window.addEventListener("keyup", (e) => {
 //   console.log(e.key);
 // });
+document.getElementById("reload").addEventListener("click", (e) => {
+  window.location.reload();
+});

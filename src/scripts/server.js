@@ -22,7 +22,6 @@ async function connectedServer() {
     let addressText = ele.address;
 
     let address = addressText.split(".");
-    console.log(ele.address);
     connectionContainer.innerHTML += `
     <div class="connection-div-container">
    <div

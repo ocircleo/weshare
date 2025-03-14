@@ -6,7 +6,7 @@ const express = require("express");
 const { pageRouter } = require("./express/PageRouter");
 const { fileRouter } = require("./express/FileRouter");
 const { getIPAddress } = require("./UtilityFunctions");
-const { generateUser } = require("./UserDb");
+const { generateUser, getUser } = require("./UserDb");
 cors = require("cors");
 const server = express();
 //server
@@ -21,6 +21,7 @@ server.put("/ping", (req, res) => {
       error: false,
       connected: true,
       message: "pong",
+      user: getUser(id),
     });
   else
     res.send({
@@ -29,7 +30,6 @@ server.put("/ping", (req, res) => {
       message: "pong",
       user: generateUser("user"),
     });
-  console.log("pong");
 });
 server.use("/", pageRouter);
 server.use("/files", fileRouter);
