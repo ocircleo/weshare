@@ -2,17 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 body {
-  background-color: black;
+  background-color: white;
   padding: 20px;
 }
 #container {
   width: 100%;
-  background-color: black;
+  background-color: white;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -84,7 +84,7 @@ border-radius: 4px;
     margin: 50px 0;
   }
 #email{
-    background-color: white;
+    background-color: skyblue;
     color: black;
     display: inline-block;
     font-size: 15px;
